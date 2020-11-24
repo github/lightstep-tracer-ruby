@@ -181,7 +181,7 @@ module LightStep
         max_log_records: max_log_records,
       }
 
-      Span.new(span_options).tap do |span|
+      Span.new(**span_options).tap do |span|
         if block_given?
           begin
             return yield span
